@@ -23,10 +23,10 @@ User Function Matematicos()
   nExpo := nValor1 ** nValor2
   nMod  := nValor2 % nValor1
 
-  FwAlertSuccess('Adi√ß√£o: ' + STR(nAdic) + CRLF +;
-                 'Subtra√ß√£o: ' + STR(nSub) + CRLF +;
-                 'Multiplica√ß√£o: ' + STR(nMult) + CRLF +;
-                 'Divis√£o: ' + STR(nDiv) + CRLF +;
-                 'Exponencia√ß√£o: ' + STR(nExpo) + CRLF +;
-                 'M√≥dulo (Resto da Divis√£o): ' + STR(nMod), 'Operadores Matem√°ticos')
+  FwAlertSuccess('AdiÁ„o: ' + STR(nAdic) + CRLF +;
+                 'SubtraÁ„o: ' + STR(nSub) + CRLF +;
+                 'MultiplicaÁ„o: ' + STR(nMult) + CRLF +;
+                 'Divis„o: ' + STR(nDiv) + CRLF +;
+                 'ExponenciaÁ„o: ' + STR(nExpo) + CRLF +;
+                 'MÛdulo (Resto da Divis„o): ' + STR(nMod), 'Operadores Matem·ticos')
 Return
