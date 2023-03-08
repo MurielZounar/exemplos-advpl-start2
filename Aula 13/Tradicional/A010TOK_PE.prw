@@ -9,13 +9,18 @@
 User Function A010TOK()
   Local aArea    := GetArea()
   Local aAreaB1  := SB1->(GetArea())
-  Local lRetorno := .F. 
+  Local lRetorno := .T.
+	
+	
+		SB1->(RecLock('SB1', .F.))
+			SB1->B1_DESC := 'TESTE - ' + M->B1_DESC
+		SB1->(MsUnlock())
 
-  if ExistBlock('ConfirmaCadastro')
-    lRetorno := ExecBlock('ConfirmaCadastro', .F., .F.)
-  else
-    FwAlertError('Função não encontrada!', 'Erro!')
-  endif
+  // if ExistBlock('ConfirmaCadastro')
+  //   lRetorno := ExecBlock('ConfirmaCadastro', .F., .F.)
+  // else
+  //   FwAlertError('Função não encontrada!', 'Erro!')
+  // endif
 
   RestArea(aAreaB1)
   RestArea(aArea)
