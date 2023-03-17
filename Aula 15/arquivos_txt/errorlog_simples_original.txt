@@ -1,0 +1,85 @@
+THREAD ERROR ([20816], Muriel Zounar, MURIEL_NOTE)   09/03/2023 11:37:37
+variable does not exist VARIAVELNAOEXISTE on U_ERRORLOG(ERRORLOG.PRW) 09/03/2023 11:37:20 line : 10
+
+[TOTVS build: 7.00.210324P-20211006]
+
+[TOTVS Environment: PROTHEUS12133]
+[TOTVS Environment RPODB: top]
+[TOTVS Environment Trace: 0]
+[TOTVS Environment IBXLog: Nenhum]
+[TOTVS Environment KillStack: Nenhum]
+[TOTVS Environment TraceStack: Nenhum]
+[TOTVS Environment SpecialKey: Nenhum]
+[TOTVS Environment LocalFiles: CTREE]
+[TOTVS Environment LogProfiler: Nenhum]
+[TOTVS Environment TopMemoMega: 1]
+[TOTVS Environment RPOLanguage: multi]
+[TOTVS Environment RegionalLanguage: Nenhum]
+[TOTVS Environment LocalDBExtension: .dtc]
+[TOTVS Environment ConnectionTimeOut: Nenhum]
+[TOTVS Environment General CTreeMode: Nenhum]
+[TOTVS Environment General ConsoleLog: 1]
+[TOTVS Environment General ConsoleFile: Nenhum]
+[TOTVS Environment General MaxQuerySize: Nenhum]
+[TOTVS Environment General MaxStringSize: 10]
+[TOTVS Remote Lib: QT-5.15.3 WIN]
+[TOTVS Remote type: Microsoft Windows]
+[TOTVS Remote Build: 7.00.210324P-20210914]
+[TOTVS Remote Version: 20.3.0.0]
+[TOTVS Server Type: Console]
+[TOTVS Server Build: 7.00.210324P-20211006]
+[TOTVS Server Version: 20.3.0.2]
+[TOTVS Server 64 bits: Sim]
+[TOTVS Server Unix: Não]
+[TOTVS Database: MSSQL]
+[TOTVS Framework Versão: 20211004]
+[TOTVS Framework Date: 20211006_135652]
+[TOTVS Framework Commit: 94c212d6522f77c511f4ddc68641247405742f8b]
+[TOTVS RPO Release: 12.1.033]
+[TOTVS License Server Version: 3.4.1]
+[TOTVS Workarea - Alias: Nenhum]
+
+Publicas
+  Public 1: CPAISLOC(C) :BRA
+  Public 2: ASX8(A) :
+
+STACK U_ERRORLOG(ERRORLOG.PRW) 09/03/2023 11:37:20
+
+
+STACK { | E | ERRORDIALOG( E ) }(APLIB240.PRW) 06/10/2021 13:57:35
+
+  Param 1: E(O) : O
+  Local CodeBlock 1: E(O) :O
+
+STACK ERRORDIALOG(APLIB240.PRW) 06/10/2021 13:57:35
+
+  Param 1: E(O) : O
+  Local 1: E(O) :O
+  Local 2: LINSIGA(L) :.F.
+  Local 3: CMSG(U) :NIL
+  Local 4: NI(U) :NIL
+  Local 5: CX(U) :NIL
+  Local 6: CERROR(U) :NIL
+  Local 7: LSKIPERROR(L) :.F.
+  Local 8: AOBJLOG(A) :
+  Local 9: NX(U) :NIL
+  Local 10: URETURN(U) :NIL
+
+STACK ERRORDLG(APLIB240.PRW) 06/10/2021 13:57:35
+
+  Param 1: OERR(O) : O
+  Param 2: CMSG(U) : NIL
+  Local 1: OERR(O) :O
+  Local 2: CMSG(U) :NIL
+  Local 3: ODLG(U) :NIL
+  Local 4: OFONT(U) :NIL
+  Local 5: OBMP(U) :NIL
+  Local 6: OPANEL(U) :NIL
+  Local 7: OPANELBMP(U) :NIL
+  Local 8: ODETAIL(U) :NIL
+  Local 9: OSEND(U) :NIL
+  Local 10: OCLOSE(U) :NIL
+  Local 11: OSAVE(U) :NIL
+  Local 12: OERROR(U) :NIL
+
+Files
