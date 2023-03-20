@@ -2,7 +2,7 @@
 #INCLUDE 'FWMVCDEF.CH'
 
 /*/{Protheus.doc} User Function MyBrowse
-  Exemplo de uso da função FWMBrowse
+  Exemplo de fonte em MVC
   @type  Function
   @author Muriel Zounar
   @since 09/03/2023
@@ -60,7 +60,7 @@ Static Function ModelDef()
   oModel:SetDescription('Modelo de dados de Cursos')
   
   // Adiciona a descrição do Componente do Modelo de Dados
-  oModel:GetModel('ZZCMASTER'):SetDescription('Dados do Curso')
+  oModel:GetModel('ZZCMASTER'):SetDescription('Formulário do Curso')
 
   // Define a chave primária
   oModel:SetPrimaryKey({'ZZC_COD'})
