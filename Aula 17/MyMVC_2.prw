@@ -2,7 +2,7 @@
 #INCLUDE 'FWMVCDEF.CH'
 
 /*/{Protheus.doc} User Function MyBrowse
-  Exemplo de uso da função FWMBrowse
+  Exemplo de fonte em MVC
   @type  Function
   @author Muriel Zounar
   @since 09/03/2023
