@@ -34,7 +34,7 @@ Static Function MenuDef()
 Return aRotina
 
 Static Function ModelDef()
-  Local bModVldActiv := {|oMdl| FwAlertInf('Vamos ao cadastro!', 'Cadastro de Curso'), .T.} //? Bloco de código que será chamado na Pré-validação (MODELVLDACTIVE)
+  Local bModVldActiv := {|oMdl| FwAlertInfo('Vamos ao cadastro!', 'Cadastro de Curso'), .T.} //? Bloco de código que será chamado na Pré-validação (MODELVLDACTIVE)
   Local bModelPre    := {|oMdl| ValidPre(oMdl)} //? Bloco de código que será chamado na Pré-validação (MODELPRE)
   Local bModelPos    := {|oMdl| ValidPos(oMdl)} //? Bloco de código que será chamado na Pós-validação (MODELPOS)
   Local bModelCancel := {|oMdl| Cancel(oMdl)}   //? Bloco de código que será chamado na Pós-validação (MODELCANCEL)
@@ -43,6 +43,7 @@ Static Function ModelDef()
   Local bLinePre     := {|oGrid, nLine, cAction, cFieldId, xValue, xCurValue| ValidLine(oGrid, nLine, cAction, cFieldId, xValue, xCurValue)}
   Local bLinePost    := {|oGrid, nLine| ValidPosLine(oGrid, nLine)}
   Local bLineLoad    := {|oGrid, lCopy| LoadLine(oGrid, lCopy)}
+  
   Local oModel       := MPFormModel():New('MYMVC_3M', bModelPre, bModelPos, /*MODELCOMITTTS*/, bModelCancel)
   Local oStruZZC     := FWFormStruct(1, 'ZZC')
   Local oStruZZB     := FWFormStruct(1, 'ZZB')
@@ -95,7 +96,6 @@ Static Function ValidPre(oMdl)
 
   if nOperation == 4 //? Alteração
     oMdl:GetModel('ZZCMASTER'):GetStruct():SetProperty('ZZC_COD', MODEL_FIELD_WHEN, FwBuildFeature(STRUCT_FEATURE_WHEN, '.F.'))
-    lAutorizado := .F.
   endif
 Return lAutorizado
 
