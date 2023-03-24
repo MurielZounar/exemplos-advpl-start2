@@ -147,21 +147,21 @@ Return
 
 //? Função para deletar registros marcados
 User Function Deleta()
-  DbSelectArea('ZZC')
-  
-  ZZC->(DbGotop())
-  
-  while ZZC->(!EOF())
-    if oMark:IsMark()   //? Verifica se o registro está marcado
-      if MsgYesNo('Confirma a exclusão dos cursos selecionados?')
-        RecLock('ZZC', .F.)
-          ZZC->(DbDelete()) //? Marca o registro como Deletada (D_E_L_E_T_ = '*')
-        ZZC->(MSUnlock())
+  if MsgYesNo('Confirma a exclusão dos cursos selecionados?')
+    DbSelectArea('ZZC')
+    
+    ZZC->(DbGotop())
+    
+    while ZZC->(!EOF())
+      if oMark:IsMark()   //? Verifica se o registro está marcado
+          RecLock('ZZC', .F.)
+            ZZC->(DbDelete()) //? Marca o registro como Deletada (D_E_L_E_T_ = '*')
+          ZZC->(MSUnlock())
       endif
-    endif
 
-    ZZC->(DbSkip())
-  enddo
+      ZZC->(DbSkip())
+    enddo
+  endif
 
   //? Executa a atualização das informações no Browse
   oMark:Refresh(.T.) //? .T. Indica que deverá ser posicionado no primeiro registro do Browse
