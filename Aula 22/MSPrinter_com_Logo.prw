@@ -98,7 +98,7 @@ Return
 
 //? Função para imprimir o cabeçalho
 Static Function Cabecalho(cAlias)
-    Local cLogo := ('\system\LGRL' + SM0->M0_CODIGO + '.png')
+    Local cLogo := ('\system\LGRL' + SM0->M0_CODIGO + '.png') //? Para que o logo seja impresso, é necessário colocá-lo na pasta system (dentro da protheus_data).
 
     //? Criando caixa para colocar texto
     oPrint:Box(15, 15, 85, 580, '-8')
