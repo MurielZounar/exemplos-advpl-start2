@@ -20,7 +20,7 @@ User Function MSPrinter()
     Local cAlias := GeraCons()
 
     if !Empty(cAlias)
-        //? Régua ed processamento
+        //? Régua de processamento
 	    Processa({|| MontaRel(cAlias)}, 'Aguarde...', 'Imprimindo relatório...', .F.)
     else    
         FwAlertError('Nenhum Registro encontrado!', 'Atenção')
@@ -136,6 +136,9 @@ Static Function ImpDados(cAlias)
     (cAlias)->(DbGoTop())
 
     while (cAlias)->(!EOF())
+        //? Verificando se atingiu o número máximo de linhas para uma página (770)
+        VeriQuebPg(MAX_LINE)
+
         if AllTrim((cAlias)->((A1_MSBLQL))) == '1'
             nCor := VERMELHO
         else
@@ -171,9 +174,6 @@ Static Function ImpDados(cAlias)
         
         //? Aumentando em 30 a posição da linha.
         nLinha += 30
-
-        //? Verificando se atingiu o número máximo de linhas para uma página (770)
-        VeriQuebPg(MAX_LINE)
 
         (cALias)->(DbSkip())
     enddo

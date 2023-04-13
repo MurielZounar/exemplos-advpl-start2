@@ -105,11 +105,11 @@ Static Function Imprime(oReport)
 			oSection2:Init()
 		endif
 
-		cNumComp  := (cAlias)->C7_NUM
-		cDtComp   := DtoC(StoD((cAlias)->C7_EMISSAO))
-		cQtd      := cValToChar((cAlias)->C7_QUANT)
-		cVlUnit   := cValToChar((cAlias)->C7_PRECO)
-		cVlTot    := cValToChar((cAlias)->C7_TOTAL)
+		cNumComp := (cAlias)->C7_NUM
+		cDtComp  := DtoC(StoD((cAlias)->C7_EMISSAO))
+		cQtd     := cValToChar((cAlias)->C7_QUANT)
+		cVlUnit  := cValToChar((cAlias)->C7_PRECO)
+		cVlTot   := cValToChar((cAlias)->C7_TOTAL)
 
 		//? Imprimindo linha
 		oSection2:PrintLine()
@@ -124,7 +124,7 @@ Static Function Imprime(oReport)
 		oSection1:Finish()	
 
 	//? Finalizando seção 2
-		oSection2:Finish()	
+		oSection2:Finish()
 	
 	(cAlias)->(DBCloseArea())		
 

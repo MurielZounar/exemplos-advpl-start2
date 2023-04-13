@@ -141,6 +141,9 @@ Static Function ImpDados(cAlias)
     (cAlias)->(DbGoTop())
 
     while (cAlias)->(!EOF())
+        //? Verificando se atingiu o número máximo de linhas para uma página (770)
+        VeriQuebPg(MAX_LINE)
+
         if AllTrim((cAlias)->((A1_MSBLQL))) == '1'
             nCor := VERMELHO
         else
@@ -175,10 +178,7 @@ Static Function ImpDados(cAlias)
         oPrint:Say(nLinha, 540, AllTrim((cAlias)->(A1_CEP)), oFont10,, nCor)
         
         //? Aumentando em 30 a posição da linha.
-        nLinha += 30
-
-        //? Verificando se atingiu o número máximo de linhas para uma página (770)
-        VeriQuebPg(MAX_LINE)
+        nLinha += 30        
 
         (cALias)->(DbSkip())
     enddo
